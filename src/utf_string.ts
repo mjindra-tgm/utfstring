@@ -468,18 +468,18 @@ export class UtfString {
     let startByteIndex = this.findByteIndex(str, start);
 
     if (startByteIndex < 0) {
-      startByteIndex = this.lengthOf(str);
+      startByteIndex = str.length;
     }
 
     let finishByteIndex: number;
 
     if (typeof end === "undefined") {
-      finishByteIndex = this.lengthOf(str);
+      finishByteIndex = str.length;
     } else {
       finishByteIndex = this.findByteIndex(str, end);
 
       if (finishByteIndex < 0) {
-        finishByteIndex = this.lengthOf(str);
+        finishByteIndex = str.length;
       }
     }
 
